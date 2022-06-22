@@ -20,5 +20,5 @@ Console.WriteLine("Please write radius of your circle");
 double r = System.Convert.ToDouble(Console.ReadLine());
 double lenght = 2 * Math.PI * r;
 double area = Math.PI * r * r;
-double volume = 4 / 3 * Math.PI * r * r * r;
+double volume = 4.0 / 3.0 * Math.PI * r * r * r;
 Console.WriteLine($"Lenght={lenght:F2} Area={area:F2} Volume={volume:F2}");
