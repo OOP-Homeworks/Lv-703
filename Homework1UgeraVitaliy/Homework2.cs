@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Collections.Generic;
 
@@ -8,10 +8,10 @@ namespace Homework2
     {
         enum HTTPError
         {
-            Error400 = 400,
-            Error404 = 404,
-            Error504 = 504,
-            Error505 = 505
+            Bad_Request = 400,
+            Not_Found = 404,
+            Gateway_Timeout = 504,
+            Internal_Server_Error = 505
         }
         
         struct Dog
@@ -96,31 +96,13 @@ namespace Homework2
             //Homework2Part3
             Console.Write("\nWrite the error's number : ");
             int error = Convert.ToInt32(Console.ReadLine());
-            string describingError = "\nError's description : \n\n";
-            switch (error)
+            if (Enum.IsDefined(typeof(HTTPError), error))
             {
-                case (int)HTTPError.Error400:
-                    Console.WriteLine($"{describingError}400 Bad Request\nThe 400 status code, or Bad Request error, " +
-                        "means the HTTP request that was sent to the server has invalid syntax.\n");
-                    break;
-                case (int)HTTPError.Error404:
-                    Console.WriteLine($"{describingError}404 Not Found\nThe 404 status code, or a Not Found error," +
-                        " means that the user is able to communicate with the server but it is" +
-                        " unable to locate the requested file or resource.\n");
-                    break;
-                case (int)HTTPError.Error504:
-                    Console.WriteLine($"{describingError}504 Gateway Timeout\nThe 504 status code, or Gateway Timeout error," +
-                        " means that the server is a gateway or proxy server, and it is not receiving a response " +
-                        "from the backend servers within the allowed time period.\n");
-                    break;
-                case (int)HTTPError.Error505:
-                    Console.WriteLine($"{describingError}500 Internal Server Error\nThe 500 status code, or Internal " +
-                        "Server Error, means that server cannot process the request for an unknown reason. " +
-                        "Sometimes this code will appear when more specific 5xx errors are more appropriate.\n");
-                    break;
-                default:
-                    Console.WriteLine("Error is not found...\n");
-                    break;
+                Console.WriteLine("The name of the error is {0}\n", Enum.GetName(typeof(HTTPError), error));
+            }
+            else
+            {
+                Console.WriteLine("Error name is not found...");
             }
 
             //Homework2Part4
