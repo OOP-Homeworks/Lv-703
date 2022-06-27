@@ -1,4 +1,4 @@
-﻿//HomeWork2
+//HomeWork2
 //Task1
 
 Console.Write("float a = ");
