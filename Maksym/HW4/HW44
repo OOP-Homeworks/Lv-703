@@ -1,0 +1,9 @@
+class Plain : IFlyable
+    {
+        string mark;
+        bool highFly;
+        public void Fly()
+        {
+            Console.WriteLine("test plane");
+        }
+    }
