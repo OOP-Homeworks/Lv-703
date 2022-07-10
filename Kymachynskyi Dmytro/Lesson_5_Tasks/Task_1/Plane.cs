@@ -1,22 +1,24 @@
-
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Homework5
+namespace Lesson_5
 {
-    internal class Plane : IFlyable
+    public class Plane : IFlyable
     {
-        string mark;
-        int highFly;
+        public string mark;
+        public int highFly;
         public Plane(string mark, int highFly)
         {
             this.mark = mark;
             this.highFly = highFly;
         }
+
         public void Fly()
         {
-            Console.WriteLine($"The mark of plane is {mark} and it is able to fly at the high of {highFly} m.");
+            Console.WriteLine($"{mark} plane can fly at {highFly}");
         }
     }
 }

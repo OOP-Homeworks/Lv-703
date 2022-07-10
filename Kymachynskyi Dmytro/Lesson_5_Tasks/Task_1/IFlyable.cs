@@ -1,13 +1,13 @@
-
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Homework5
+namespace Lesson_5
 {
-    internal interface IFlyable
+    public interface IFlyable
     {
         void Fly();
     }
 }
-

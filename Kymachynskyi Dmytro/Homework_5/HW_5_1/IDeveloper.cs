@@ -1,14 +1,15 @@
-
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Homework5
+namespace Homework_5
 {
-    internal interface IDeveloper : IComparable<IDeveloper>
+    internal interface IDeveloper
     {
         string Tool { get; set; }
-        void Destroy();
         void Create();
+        void Destroy();
     }
 }
