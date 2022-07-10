@@ -1,12 +1,11 @@
+
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Task5
+namespace Homework5
 {
-    class Plane : IFlyable
+    internal class Plane : IFlyable
     {
         string mark;
         int highFly;
@@ -17,7 +16,7 @@ namespace Task5
         }
         public void Fly()
         {
-            Console.WriteLine($"Plane {mark} can fly with latitude {highFly} m");
+            Console.WriteLine($"The mark of plane is {mark} and it is able to fly at the high of {highFly} m.");
         }
     }
 }

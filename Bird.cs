@@ -1,15 +1,14 @@
+
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Task5
+namespace Homework5
 {
-    class Bird : IFlyable
+    internal class Bird : IFlyable
     {
-        private string name;
-        private bool canFly;
+        string name;
+        bool canFly;
         public Bird(string name, bool canFly)
         {
             this.name = name;
@@ -17,7 +16,11 @@ namespace Task5
         }
         public void Fly()
         {
-            Console.WriteLine($"Bird {name} can fly, it is {canFly}");
+            if (this.canFly)
+            {
+                Console.WriteLine($"It's the bird of the {name} breed and it is able to fly. ");
+            }
+            else Console.WriteLine($"It's the bird of the {name} breed and it isn't able to fly. ");
         }
     }
 }
